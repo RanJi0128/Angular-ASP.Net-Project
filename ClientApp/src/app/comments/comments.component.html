@@ -1,0 +1,24 @@
+<h1>Comments</h1>
+
+<p *ngIf="!users"><em>Loading...</em></p>
+
+<table class='table' *ngIf="comments">
+  <thead>
+    <tr>
+      <th>Id</th>
+      <th>Post Id</th>
+      <th>Name</th>
+      <th>Email</th>
+      <th>Body</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr *ngFor="let comment of comments">
+      <td>{{ comment.id }}</td>
+      <td>{{ comment.postId }}</td>
+      <td>{{ comment.name }}</td>
+      <td>{{ comment.email }}</td>
+      <td>{{ comment.body }}</td>
+    </tr>
+  </tbody>
+</table>

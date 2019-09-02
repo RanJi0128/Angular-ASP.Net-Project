@@ -1,0 +1,24 @@
+<h1>Users</h1>
+
+<p *ngIf="!users"><em>Loading...</em></p>
+
+<table class='table' *ngIf="users">
+  <thead>
+    <tr>
+      <th>Id</th>
+      <th>Name</th>
+      <th>User Name</th>
+      <th>Posts</th>
+      <th>Email</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr *ngFor="let user of users">
+      <td>{{ user.id }}</td>
+      <td>{{ user.name }}</td>
+      <td>{{ user.username }}</td>
+      <td><button>Posts</button></td>
+      <td>{{ user.email }}</td>
+    </tr>
+  </tbody>
+</table>
